@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CarsRequest;
-use App\Repositories\Interfaces\CarRepositoryInterface;
+use App\Repositories\Interfaces\RepositoryInterface;
 
 class CarsController extends Controller
 {
     private $carRepository;
 
-    public function __construct(CarRepositoryInterface $carRepository)
+    public function __construct(RepositoryInterface $carRepository)
     {
         $this->carRepository = $carRepository;
     }

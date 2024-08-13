@@ -5,11 +5,11 @@ namespace App\Repositories;
 
 
 use App\Models\Car;
-use App\Repositories\Interfaces\CarRepositoryInterface;
+use App\Repositories\Interfaces\RepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Http\FormRequest;
 
-class CarRepository implements CarRepositoryInterface
+class CarRepository implements RepositoryInterface
 {
     public function all(): Collection
     {

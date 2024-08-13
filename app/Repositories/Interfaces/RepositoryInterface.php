@@ -4,7 +4,7 @@ namespace App\Repositories\Interfaces;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-interface CarRepositoryInterface
+interface RepositoryInterface
 {
     public function all();
 

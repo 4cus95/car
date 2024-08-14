@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CarsRequest;
+use App\Http\Resources\CarResource;
 use App\Repositories\Interfaces\RepositoryInterface;
 
 class CarsController extends Controller
@@ -16,15 +17,11 @@ class CarsController extends Controller
 
     public function all()
     {
-        return response()->json(
-            $this->carRepository->all()
-        );
+        return new CarResource($this->carRepository->all());
     }
 
     public function getAvailableCars(CarsRequest $request)
     {
-        return response()->json(
-            $this->carRepository->getByRequest($request)
-        );
+        return new CarResource($this->carRepository->getByRequest($request));
     }
 }

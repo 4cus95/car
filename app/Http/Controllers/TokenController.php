@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AuthRequest;
-use App\Http\Resources\Token;
-use App\Http\Service\Auth;
+use App\Services\Auth;
 
 class TokenController extends Controller
 {

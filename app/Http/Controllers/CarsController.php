@@ -15,12 +15,12 @@ class CarsController extends Controller
         $this->carRepository = $carRepository;
     }
 
-    public function all()
+    public function all():CarResource
     {
         return new CarResource($this->carRepository->all());
     }
 
-    public function getAvailableCars(CarsRequest $request)
+    public function getAvailableCars(CarsRequest $request):CarResource
     {
         return new CarResource($this->carRepository->getByRequest($request));
     }

@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Http\Controllers\CarsController;
 use App\Repositories\CarRepository;
 use App\Repositories\Interfaces\RepositoryInterface;
 use Illuminate\Support\ServiceProvider;

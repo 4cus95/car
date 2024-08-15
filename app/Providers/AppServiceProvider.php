@@ -14,9 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->when(CarsController::class)
-            ->needs(RepositoryInterface::class)
-            ->give(CarRepository::class);
+        $this->app->bind(RepositoryInterface::class, CarRepository::class);
     }
 
     /**
